@@ -1,81 +1,29 @@
-.home-container {
-    margin: 80px auto;
-    width: 640px;
+.pixelSquare{
+    position:absolute;
+    padding-left:12%;
+    margin-bottom:7%;
 }
 
-.home {
-    position: absolute;
-    margin: 0 auto;
-    padding: 20px 20px 20px;
-    width: 310px;
-    background: white;
-    border-radius: 20px;
-}
-.home:before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    bottom: -8px;
-    left: -8px;
-    z-index: -1;
-    background: rgba(0, 0, 0, 0.08);
-    border-radius: 4px;
-}
-.home h1 {
-    margin: -20px -20px 21px;
-    line-height: 40px;
-    font-size: 15px;
-    text-align: center;
-    text-shadow: 0 1px white;
-    background: #1E6899;
-    border-bottom: 1px solid #cfcfcf;
-    border-radius: 3px 3px 0 0;
-    box-shadow: 0 1px whitesmoke;
-}
-.home p {
-    margin: 20px 0 0;
-}
-
-.home input[type=text], .home input[type=password] {
-    width: 90%;
-}
-.home p.remember_me {
-    float: left;
-    line-height: 31px;
-}
-.home p.remember_me label {
-    font-size: 12px;
-    color: #777;
-    cursor: pointer;
-}
-.home p.remember_me input {
+.pixelInnerSquare{
     position: relative;
-    bottom: 1px;
-    margin-right: 4px;
-    vertical-align: middle;
-}
-.home p.submit {
-    text-align:right;
 }
 
 .pixelSquare img{
-    position: absolute;
-    display: none;
+    z-index:10;
+    position:absolute;
 }
 
 .pixelSquare{
-    position:relative;
     -webkit-user-select: none;
-    cursor:crosshair;
 }
 
 .areaSquare {
+    box-shadow: inset 1px 1px 1px 1px gray;
+    cursor:crosshair;
     background-color: lightgray;
     height:10px;
     width:10px;
     position: relative;
-    border: 1px solid gray;
     float:left;
     display: inline-block;
 }
