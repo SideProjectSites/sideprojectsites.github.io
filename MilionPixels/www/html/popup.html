@@ -1,0 +1,14 @@
+<div class='popup-overlay' ng-click="hidePopup()"></div>
+<div id="pup" class="popup" ng-style='dialogStyle'>
+    <div class='popup-close' ng-click="hidePopup()">X</div>
+    <div class='popup-title'>
+        <h1>{{popupToShow.title}}</h1>
+    </div>
+    <div class='popup-content'>
+        <pre>{{popupToShow.content}}</pre>
+    </div>
+    <div class="popup-buttons">
+        <button ng-click="popupToShow.buttonAction()">{{popupToShow.buttonContent}}</button>
+        <button ng-click="hidePopup()" ng-show="popupToShow.showButton2">{{popupToShow.button2Content}}</button>
+    </div>
+</div>

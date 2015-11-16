@@ -1,0 +1,31 @@
+<div class="buyPixels-container">
+    <div class="userDataForBuyin">
+        <label>Please fill you details and upload image (max 2MB) to continue to payment:</label>
+        <form name="userDataForm" ng-submit="submitUserData(userData)">
+            <label>Name: </label><input type="text" ng-model="userData.fullName" value="Your Name">
+            <label>Email: </label><input type="text" ng-model="userData.email" value="your@email.com">
+            <label>Image: </label><input type="file" value="<Image Path>" custom-on-change="handleImage" accept="*/image">
+            <img id="blah" src="{{imagePath}}" alt="Image Preview" />
+            <input type="submit" value="Submit">
+        </form>
+        <div ng-show="submited" class="paypalSection">
+            <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+                <!--<input type="hidden" name="cmd" value="_s-xclick">-->
+                <!--<input type="hidden" name="hosted_button_id" value="NSQ7QUZJQJNUL">-->
+                <!--<input type="hidden" name="quantity" value="{{quantity}}">-->
+                <!--<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+            <!--</form>-->
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=chenfeldmn-facilitator@gmail.com" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="NSQ7QUZJQJNUL">
+                <input type="hidden" name="quantity" value="{{quantity}}">
+                <input type="image"
+                       src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif"
+                       border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif"
+                     width="1" height="1">
+            </form>
+        </div>
+    </div>
+</div>
